@@ -12,7 +12,7 @@ pipeline {
                 sh ''' 
                     echo "updating Maven version"
                     cd /tmp
-                    wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
+                    wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
                     tar xvf apache-maven-3.8.5-bin.tar.gz 
                     cd /usr/share/maven 
                     sudo cp /tmp/apache-maven-3.8.5/* .
