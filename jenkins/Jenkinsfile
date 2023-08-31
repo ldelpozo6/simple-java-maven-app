@@ -15,7 +15,7 @@ pipeline {
                     wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
                     tar xvf apache-maven-3.9.4-bin.tar.gz
                     cd /usr/share/maven 
-                    sudo cp /tmp/apache-maven-3.8.5/* .
+                    sudo cp /tmp/apache-maven-3.9.4/* .
                     mvn -version
                 '''
                 sh 'mvn -B -DskipTests clean package'
