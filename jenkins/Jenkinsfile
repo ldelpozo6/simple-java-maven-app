@@ -9,15 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh ''' 
-                    echo "updating Maven version"
-                    cd /tmp
-                    wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
-                    tar xvf apache-maven-3.9.4-bin.tar.gz
-                    cd /usr/share/maven 
-                    cp /tmp/apache-maven-3.9.4/* .
-                    mvn -version
-                '''
+                sh 'mvn -version'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
